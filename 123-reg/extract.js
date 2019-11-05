@@ -16,11 +16,7 @@ for (i = 1, len = rows.length - 2; i < len; i++) {
   destination = row.getElementsByClassName('dns_data')[0].title;
 
   if (type === 'TXT/SPF') {
-    if (destination.match(/^(v=spf1|spf2.0)/) !== null) {
-      type = 'SPF';
-    } else {
-      type = 'TXT';
-    }
+    type = 'TXT';
     destination = '"' + destination + '"';
   }
 
