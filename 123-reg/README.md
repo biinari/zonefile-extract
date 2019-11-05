@@ -18,7 +18,3 @@ Read through the script to confirm for yourself that it does nothing malicious. 
 ## Disclaimer
 
 I am not affiliated with 123-reg. Their advanced DNS page may change at any time, which may break this script.
-
-## License
-
-Public Domain
