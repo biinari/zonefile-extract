@@ -10,12 +10,10 @@ var output = '';
 
 output += '$TTL ' + defaultTTL + '\n'; // start with default TTL
 
-// skip header and last two rows (add new entry, delete all entries)
 for (i = 0, len = rows.length; i < len; i++) {
   row = rows[i];
   hostname = row.getElementsByClassName('name')[0].innerText;
   type = row.getElementsByClassName('type')[0].innerText;
-  // priority = row.getElementsByClassName('dns_priority')[0].innerText; - not included
   ttl = row.getElementsByClassName('ttl')[0].innerText;
   destination = row.getElementsByClassName('content')[0].innerText;
   
