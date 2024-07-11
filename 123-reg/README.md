@@ -1,6 +1,8 @@
 # Extract DNS entries from 123-reg advanced DNS page
 
-123-reg do not support exporting their zone files, which prompted me to create a script to extract the DNS entries automatically. 
+***Update (11 Jul 2024): 123-reg now supports exporting the Zone File from their DNS Records page. Use the Actions menu.***
+
+In the old system (pre-2023), 123-reg did not support exporting their zone files, which prompted me to create a script to extract the DNS entries automatically. 
 
 ## Instructions
 
