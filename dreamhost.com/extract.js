@@ -2,7 +2,7 @@
 // Run in the browser console on your DreamHost Manage DNS page.
 // Set this to true to include DreamHost-managed records in the output.
 (() => {
-    const includeManagedRecords = false;
+    const includeManagedRecords = true;
     const sectionNames = includeManagedRecords
         ? ['Custom Records', 'DreamHost Records']
         : ['Custom Records'];

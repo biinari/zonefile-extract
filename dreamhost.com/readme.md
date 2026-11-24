@@ -13,6 +13,6 @@ This script reads the DNS records loaded in the DreamHost panel and prints a zon
 
 ## Include DreamHost-managed records
 
-The script exports **Custom Records** by default. To include the **DreamHost Records** section as well, set `includeManagedRecords` to `true` near the top of `extract.js` before running it. The script can only read records that have loaded on the page.
+The script exports only **Custom Records** by default. To include the **DreamHost Records** section as well, set `includeManagedRecords` to `true` near the top of `extract.js` before running it. The script can only read records that have loaded on the page.
 
 If the domain uses external nameservers, the records shown in DreamHost may differ from the live DNS records served by that provider.
