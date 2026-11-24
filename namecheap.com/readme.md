@@ -1,19 +1,15 @@
-# Extract DNS entries from hover.com DNS page
+# Export DNS records from Namecheap
 
-hover.com do not support exporting their zone files, which prompted me to create a script to extract the DNS entries automatically. 
+## Open Advanced DNS
 
-## Instructions
+1. Sign in to the [Namecheap dashboard](https://ap.www.namecheap.com/dashboard).
+2. Select **Domain List** in the left sidebar.
+3. Click **Manage** next to the domain you want to export.
+4. Open the **Advanced DNS** tab and wait for the records to load.
+5. Clear any search or filters in **Host Records**. Check **Mail Settings** for additional DNS records displayed separately.
 
-Read through the script to confirm for yourself that it does nothing malicious. All it does is to get the info from the page and log it to your console.
+## Review records before migrating
 
-1. Login to your hover.com control panel.
-2. Usually this will open by default on the "Manage Domains" page which is the control panel homepage [https://www.hover.com/control_panel](https://www.hover.com/control_panel) If it doesn't, try opening this link.
-3. Open the Developer tools in your browser (common shortcuts include F12 or Ctrl+Shift+I).
-4. Click on the "Console" tab in developer tools.
-5. Copy and paste the above script.
-6. Press Enter to run.
-7. The output to the console should be in zone file format.
+Namecheap displays **URL Redirect Records** alongside ordinary DNS records. These redirects are a Namecheap forwarding feature and have no direct zone-file equivalent. Recreate them with the destination provider's redirect feature or on your web server.
 
-## Disclaimer
-
-I am not affiliated with hover.com. Their advanced DNS page may change at any time, which may break this script.
+Review any DNS records shown under **Mail Settings** against the destination's mail configuration. A provider-managed SPF record for email forwarding may need a different value if you change mail providers.
