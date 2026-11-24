@@ -1,25 +1,13 @@
-# Extract DNS entries from 123-reg advanced DNS page
+# Export DNS records from SiteGround
 
-***Update (11 Jul 2024): 123-reg now supports exporting the Zone File from their DNS Records page. Use the Actions menu.***
-
-In the old system (pre-2023), 123-reg did not support exporting their zone files, which prompted me to create a script to extract the DNS entries automatically. 
+This script reads the records loaded in SiteGround's DNS Zone Editor and prints a zone-file fragment to the browser console. It makes no network requests or DNS changes.
 
 ## Instructions
 
-Read through the script to confirm for yourself that it does nothing malicious. All it does is to get the info from the page and log it to your console.
+1. Sign in to [SiteGround Site Tools](https://tools.siteground.com/).
+2. Use the site selector at the top left to choose the website you want to export.
+3. In the left sidebar, open **Domain → DNS Zone Editor**. Wait for the records to load and confirm that the editor is showing the intended DNS zone.
+4. Open your browser's developer tools and select **Console**. Read [`extract.js`](extract.js), then paste and run it in the console.
+5. Copy the output to a local text file and compare it with the panel. Review any warnings and set the appropriate default TTL before importing.
 
-1. Login to your Siteground dashboard.
-2. Select the domain you want to get entries from.
-3. Go to "Manage DNS (A, MX, CNAME, TXT, SRV)".
-
-4. Click on the "Advanced DNS" tab.
-
-
-5. Open the Developer tools in your browser (common shortcuts include F12 or Ctrl+Shift+I).
-6. Click on the "Console" tab in developer tools.
-7. Copy and paste the above script.
-8. The output to the console should be in zone file format.
-
-## Disclaimer
-
-I am not affiliated with 123-reg. Their advanced DNS page may change at any time, which may break this script.
+The extractor supports A, CNAME, MX, NS, and TXT records. It preserves MX priorities and quotes TXT values. The record list does not show individual TTLs, so the script leaves them out. Check which nameserver records belong in the destination zone before copying NS entries.
