@@ -1,0 +1,6 @@
+## Remove Mac meta files from git tracking
+.DS_Store
+
+## Remove windows meta files from git tracking
+Desktop.ini
+Thumbs.db
