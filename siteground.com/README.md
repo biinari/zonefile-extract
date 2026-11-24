@@ -8,10 +8,13 @@ In the old system (pre-2023), 123-reg did not support exporting their zone files
 
 Read through the script to confirm for yourself that it does nothing malicious. All it does is to get the info from the page and log it to your console.
 
-1. Login to your 123-reg control panel.
-2. Manage the domain you want to get entries from.
+1. Login to your Siteground dashboard.
+2. Select the domain you want to get entries from.
 3. Go to "Manage DNS (A, MX, CNAME, TXT, SRV)".
+
 4. Click on the "Advanced DNS" tab.
+
+
 5. Open the Developer tools in your browser (common shortcuts include F12 or Ctrl+Shift+I).
 6. Click on the "Console" tab in developer tools.
 7. Copy and paste the above script.
